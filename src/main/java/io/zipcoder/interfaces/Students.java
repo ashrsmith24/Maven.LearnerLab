@@ -6,6 +6,7 @@ public final class Students extends People<Student> {
     public final static Students INSTANCE = new Students();
 
 
+
     private Students() {
         Student ashley = new Student(2);
         ashley.setName("Ashley");
@@ -23,15 +24,14 @@ public final class Students extends People<Student> {
         add(res);
     }
 
-    public static Students getInstance() {
-        return INSTANCE;
-
-    }
-
     @Override
     public Student[] getArray() {
-        return getPersonList().toArray(new Student[0]);
+        Student[] studentArray = personList.toArray(new Student[getPersonList().size()]);
+        return studentArray;
+    }
 
+    public static Students getInstance() {
+        return INSTANCE;
     }
 
 }

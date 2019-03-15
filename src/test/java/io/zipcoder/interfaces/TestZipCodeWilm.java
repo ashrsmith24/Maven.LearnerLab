@@ -4,7 +4,6 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class TestZipCodeWilm {
-
     @Test
     public void testHostLectureWithTeacher() {
         // Given
@@ -15,7 +14,7 @@ public class TestZipCodeWilm {
             student.learn(5);
         }
 
-        Instructor instructor = new Instructor(1);
+        Instructor instructor = new Instructor(1L);
 
         // When
         zcw.hostLecture(instructor, 20);
@@ -61,5 +60,4 @@ public class TestZipCodeWilm {
         Assert.assertEquals(expected, actual);
 
     }
-
 }

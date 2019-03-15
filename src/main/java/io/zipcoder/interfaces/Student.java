@@ -2,23 +2,18 @@ package io.zipcoder.interfaces;
 
 public class Student extends Person implements Learner {
 
-    private double totalStudyTime = 0;
+    private Double totalStudyTime;
 
-
-    public Student(long id) {
-        super(id);
+    public Student(long l) {
+        super(l);
+        this.totalStudyTime = 0.0;
     }
 
-    public static Students getInstance() {
-        return null;
+    public void learn(double numberOfHours) {
+        this.totalStudyTime += numberOfHours;
     }
 
-    public  void learn(double numberOfHours) {
-        totalStudyTime += numberOfHours;
+    public Double getTotalStudyTime() {
+        return this.totalStudyTime;
     }
-
-    public double getTotalStudyTime() {
-        return totalStudyTime;
-    }
-
 }

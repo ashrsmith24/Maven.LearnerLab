@@ -23,7 +23,7 @@ public class TestPerson {
     @Test
     public void personSetNameTest(){
         // Given
-        Person person = new Person(246810);
+        Person person = new Person(2L);
         String expectedName = "Ashley";
 
         // When

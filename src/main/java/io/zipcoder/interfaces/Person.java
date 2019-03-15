@@ -1,29 +1,28 @@
 package io.zipcoder.interfaces;
 
-public class Person  {
-    final long id;
+public class Person <E>{
+
+
+    //I don't want anyone to be able to access, and final is a constant
+    private final Long id;
     private String name;
 
-
-    public long getId() {
-        return id;
+    //the constructor, takes a long parameter and this is a refrences  to the current object
+    public Person(Long id){
+        this.id = id;
     }
-
-    public String getName() {
+    //the getId method returns a long, and its "id"
+    public Long getId(){
+        return this.id;
+    }
+    //method getName returns a string, and returns a name
+    public String getName(){
         return name;
     }
-
-    public Person(long id) {
-        this.id = id;
-
-    }
-
+    //method setName, doesn't return thus void and it takes a parameter
+    // set the value and arg
     public void setName(String name) {
-        this.name = name;
-    }
-
-    public void learn(double numberOfHours) {
+         this.name = name;
 
     }
-
 }
